@@ -1,8 +1,21 @@
+var data;
+var url="config.json";
+var request=new XMLHttpRequest();
+request.open("GET",url);
+request.onload=function(){
+	if(request.status==200){
+		data=JSON.parse(request.responseText);
+		createIndex();
+	}
+}
+request.send(null);
 
-for(var i=1;i<=100;i++){
-	var chapterTxt="第"+i+"章";
-	var titleTxt="节点花园"+i;
-	createTitle(chapterTxt,titleTxt);
+function createIndex(){
+	for(var i=0;i<data.pro.length;i++){
+		var chapterTxt=data.pro[i].chapter;
+		var titleTxt=data.pro[i].title;
+		createTitle(chapterTxt,titleTxt);
+	}
 }
 
 function createTitle(chapterTxt,titleTxt){
@@ -26,6 +39,4 @@ function createTitle(chapterTxt,titleTxt){
 	
 	var con=document.getElementsByClassName("container");
 	con[0].appendChild(pro);
-	console.log("1245");
-	
 }
