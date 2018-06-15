@@ -18,12 +18,33 @@ utils.captureMouse=function(element){
 			x=event.clientX+document.body.scrollLeft+document.documentElement.scrollLeft;
 			y=event.clientY+document.body.scrollTop+document.documentElement.scrollTop;
 		}
-		x-=element.offsetLeft;
-		y-=element.offsetTop;
+		x-=getOffsetLeftByBody(element);
+		y-=getOffsetTopByBody(element);
+		console.log(event.pageX+"--pageX");
+		console.log(getOffsetLeftByBody(element)+"--offsetLeft");
+		console.log(x+"----x");
 		mouse.x=x;
 		mouse.y=y;
 	},false);
 	return mouse;
+	
+	function getOffsetTopByBody (el) {  
+	  var offsetTop = 0  
+	  while (el && el.tagName !== 'body') {  
+	  	offsetTop+= el.offsetTop  
+	    el = el.offsetParent  
+	  }  
+	  return offsetTop  
+	}
+	
+	function getOffsetLeftByBody (el) {  
+	  var offsetLeft = 0  
+	  while (el && el.tagName !== 'body') {  
+	  	offsetLeft += el.offsetLeft 
+	    el = el.offsetParent  
+	  }  
+	  return offsetLeft  
+	}
 }
 
 utils.colorToRGB=function(color,alpha){

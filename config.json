@@ -1,11 +1,6 @@
 {
 	"pro":[
 		{
-			"chapter":"测试",
-			"title":"没问题",
-			"jssrc":"js/demo0.js"
-		},
-		{
 			"chapter":"第3章",
 			"title":"脉冲运动",
 			"jssrc":"js/demo1.js"
@@ -16,14 +11,19 @@
 			"jssrc":"js/demo2.js"
 		},
 		{
-			"chapter":"第三章",
-			"title":"你是最棒的",
-			"jssrc":"js/demo1.js"
+			"chapter":"第4章",
+			"title":"迷幻闪光灯",
+			"jssrc":"js/demo3.js"
 		},
 		{
-			"chapter":"第四章",
-			"title":"弹簧测试",
-			"jssrc":"js/demo1.js"
+			"chapter":"第5章",
+			"title":"加速度",
+			"jssrc":"js/demo4.js"
+		},
+		{
+			"chapter":"第5章",
+			"title":"宇宙飞船",
+			"jssrc":"js/demo5.js"
 		}
 	]
 
