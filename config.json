@@ -1,24 +1,29 @@
 {
 	"pro":[
 		{
-			"chapter":"第一章",
-			"title":"拖拽",
-			"src":"index"
+			"chapter":"测试",
+			"title":"没问题",
+			"jssrc":"js/demo0.js"
 		},
 		{
-			"chapter":"第二章",
-			"title":"节点花园",
-			"src":"index"
+			"chapter":"第3章",
+			"title":"脉冲运动",
+			"jssrc":"js/demo1.js"
+		},
+		{
+			"chapter":"第3章",
+			"title":"绘制正弦波",
+			"jssrc":"js/demo2.js"
 		},
 		{
 			"chapter":"第三章",
-			"title":"我是最棒的",
-			"src":"index"
+			"title":"你是最棒的",
+			"jssrc":"js/demo1.js"
 		},
 		{
 			"chapter":"第四章",
 			"title":"弹簧测试",
-			"src":"index"
+			"jssrc":"js/demo1.js"
 		}
 	]
 

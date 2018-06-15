@@ -1,3 +1,5 @@
+var animaClose=false;
+var canvas=document.getElementById("canvas");
 var data;
 var url="config.json";
 var request=new XMLHttpRequest();
@@ -14,11 +16,12 @@ function createIndex(){
 	for(var i=0;i<data.pro.length;i++){
 		var chapterTxt=data.pro[i].chapter;
 		var titleTxt=data.pro[i].title;
-		createTitle(chapterTxt,titleTxt);
+		var jssrc=data.pro[i].jssrc;
+		createTitle(chapterTxt,titleTxt,jssrc);
 	}
 }
 
-function createTitle(chapterTxt,titleTxt){
+function createTitle(chapterTxt,titleTxt,jssrc){
 	var pro=document.createElement("div");
 	pro.setAttribute("class","pro fl");
 	
@@ -34,9 +37,53 @@ function createTitle(chapterTxt,titleTxt){
 	h1.innerText=titleTxt;
 	title.appendChild(h1);
 	
+	var fileInfo=document.createElement("div");
+	fileInfo.setAttribute("class","fileInfo");
+	var p=document.createElement("p");
+	p.innerText=jssrc;
+	fileInfo.appendChild(p);
+	
 	pro.appendChild(chapter);
 	pro.appendChild(title);
+	pro.appendChild(fileInfo);
 	
 	var con=document.getElementsByClassName("container");
 	con[0].appendChild(pro);
+	
+	pro.addEventListener("click",function(e){
+		clearCanvas();
+		showStage(jssrc);
+	});
 }
+
+function clearCanvas(){
+	var context=canvas.getContext("2d");
+	context.clearRect(0,0,canvas.width,canvas.height);
+}
+
+function showStage(jssrc){
+	animaClose=false;
+	var canvas=document.getElementsByClassName("stage");
+	canvas[0].setAttribute("style","display: block;");	
+	
+	var script=document.getElementById("canvasScript");
+	var body=document.getElementById("body");
+	if(script!=null){
+		body.removeChild(script);
+	}
+	var newScript=document.createElement("script");
+	newScript.type="text/javascript";
+	newScript.charset="UTF-8";
+	newScript.setAttribute("id","canvasScript");
+	newScript.src=jssrc;
+	body.appendChild(newScript);
+	
+}
+
+var closeBtn=document.getElementById("closeBtn");
+closeBtn.addEventListener("click",function(e){
+	var canvas=document.getElementsByClassName("stage");
+	canvas[0].setAttribute("style","display: none;")
+	animaClose=true;
+	clearCanvas();
+});
