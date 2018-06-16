@@ -63,8 +63,8 @@ function clearCanvas(){
 
 function showStage(jssrc){
 	animaClose=false;
-	var canvas=document.getElementsByClassName("stage");
-	canvas[0].setAttribute("style","display: block;");	
+	var stage=document.getElementsByClassName("stage");
+	stage[0].setAttribute("style","display: block;");	
 	
 	var script=document.getElementById("canvasScript");
 	var body=document.getElementById("body");
@@ -82,8 +82,10 @@ function showStage(jssrc){
 
 var closeBtn=document.getElementById("closeBtn");
 closeBtn.addEventListener("click",function(e){
-	var canvas=document.getElementsByClassName("stage");
-	canvas[0].setAttribute("style","display: none;")
+	var stage=document.getElementsByClassName("stage");
+	stage[0].setAttribute("style","display: none;");
+	var canvas=document.getElementById("canvas");
+	$(canvas).css("background-color","#FFFFFF");
 	animaClose=true;
 	clearCanvas();
 });

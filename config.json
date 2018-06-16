@@ -24,6 +24,16 @@
 			"chapter":"第5章",
 			"title":"宇宙飞船",
 			"jssrc":"js/demo5.js"
+		},
+		{
+			"chapter":"第6章",
+			"title":"喷泉",
+			"jssrc":"js/demo6.js"
+		},
+		{
+			"chapter":"第7章",
+			"title":"拖拽与投掷",
+			"jssrc":"js/demo7.js"
 		}
 	]
 

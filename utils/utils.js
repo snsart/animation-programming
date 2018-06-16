@@ -14,21 +14,19 @@ utils.captureMouse=function(element){
 		if(event.pageX||event.pageY){
 			x=event.pageX;
 			y=event.pageY;
+			console.log(y);
 		}else{
 			x=event.clientX+document.body.scrollLeft+document.documentElement.scrollLeft;
 			y=event.clientY+document.body.scrollTop+document.documentElement.scrollTop;
 		}
-		x-=getOffsetLeftByBody(element);
-		y-=getOffsetTopByBody(element);
-		console.log(event.pageX+"--pageX");
-		console.log(getOffsetLeftByBody(element)+"--offsetLeft");
-		console.log(x+"----x");
-		mouse.x=x;
-		mouse.y=y;
+		x-=$(element).offset().left;
+		y-=$(element).offset().top;
+		mouse.x=x*scalingRatio;
+		mouse.y=y*scalingRatio;
 	},false);
 	return mouse;
 	
-	function getOffsetTopByBody (el) {  
+/*	function getOffsetTopByBody (el) {  
 	  var offsetTop = 0  
 	  while (el && el.tagName !== 'body') {  
 	  	offsetTop+= el.offsetTop  
@@ -44,7 +42,43 @@ utils.captureMouse=function(element){
 	    el = el.offsetParent  
 	  }  
 	  return offsetLeft  
+	}*/
+}
+
+utils.captureTouch=function(element){
+	var touch={x:null,y:null,isPressed:false};
+	element.addEventListener("touchstart",function(event){
+		touch.isPressed=true;
+		setTouch(event);
+	},false);
+	
+	element.addEventListener("touchend",function(event){
+		touch.isPressed=false;
+		touch.x=null;
+		touch.y=null;
+	},false);
+	
+	element.addEventListener("touchmove",function(event){
+		setTouch(event);
+	},false);
+	
+	function setTouch(event){
+		var x,y,
+			touch_event=event.touches[0];
+		if(touch_event.pageX||touch_event.pageY){
+			x=touch_event.pageX;
+			y=touch_event.pageY;
+		}else{
+			x=touch_event.clientX+document.body.scrollLeft+document.documentElement.scrollLeft;
+			y=touch_event.clientY+document.body.scrollTop+document.documentElement.scrollTop;
+		}
+		x-=$(element).offset().left;
+		y-=$(element).offset().top;
+		touch.x=x*scalingRatio;
+		touch.y=y*scalingRatio;
 	}
+	
+	return touch;
 }
 
 utils.colorToRGB=function(color,alpha){
@@ -80,3 +114,7 @@ utils.parseColor=function(color,toNumber){
 		return color;
 	}
 }
+
+utils.containsPoint=function(rect,x,y){
+	return !(x<rect.x||x>rect.x+rect.width||y<rect.y||y>rect.y+rect.height);
+};

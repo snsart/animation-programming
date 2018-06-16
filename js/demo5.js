@@ -1,3 +1,5 @@
+/*宇宙飞船*/
+/*标签：加速度，边界处理，摩擦力*/
 (function(){
 	var canvas=document.getElementById("canvas"),
 		context=canvas.getContext("2d");
@@ -7,7 +9,8 @@
 		vr=0,
 		vx=0,
 		vy=0,
-		thrust=0;//加速度
+		thrust=0,//加速度
+		friction=0.99;
 	ship.x=canvas.width/2;
 	ship.y=canvas.height/2;
 	
@@ -48,8 +51,21 @@
 			ay=Math.sin(angle)*thrust;
 		vx+=ax;
 		vy+=ay;
+		vx*=friction;
+		vy*=friction;
 		ship.x+=vx;
 		ship.y+=vy;
+		if(ship.x+ship.width/2<0){
+			ship.x=canvas.width+ship.width/2;
+		}else if(ship.x-ship.width/2>canvas.width){
+			ship.x=0-ship.width/2;
+		}
+		if(ship.y+ship.height/2<0){
+			ship.y=canvas.height+ship.height/2;
+		}else if(ship.y-ship.height/2>canvas.height){
+			ship.y=0-ship.height/2;
+		}
+		
 		ship.draw(context);
 	}
 	
