@@ -1,7 +1,7 @@
 (function(){
 	var canvas=document.getElementById("canvas"),
 		context=canvas.getContext("2d");
-		$(canvas).css("background-color","#000000");
+		$(canvas).css("background-color","#222222");
 
 	var touch=utils.captureTouch(canvas),
 		mouse=utils.captureMouse(canvas),

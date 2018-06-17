@@ -3,37 +3,57 @@
 		{
 			"chapter":"第3章",
 			"title":"脉冲运动",
-			"jssrc":"js/demo1.js"
+			"jssrc":"js/demo01.js"
 		},
 		{
 			"chapter":"第3章",
 			"title":"绘制正弦波",
-			"jssrc":"js/demo2.js"
+			"jssrc":"js/demo02.js"
 		},
 		{
 			"chapter":"第4章",
 			"title":"迷幻闪光灯",
-			"jssrc":"js/demo3.js"
+			"jssrc":"js/demo03.js"
 		},
 		{
 			"chapter":"第5章",
 			"title":"加速度",
-			"jssrc":"js/demo4.js"
+			"jssrc":"js/demo04.js"
 		},
 		{
 			"chapter":"第5章",
 			"title":"宇宙飞船",
-			"jssrc":"js/demo5.js"
+			"jssrc":"js/demo05.js"
 		},
 		{
 			"chapter":"第6章",
 			"title":"喷泉",
-			"jssrc":"js/demo6.js"
+			"jssrc":"js/demo06.js"
 		},
 		{
 			"chapter":"第7章",
 			"title":"拖拽与投掷",
-			"jssrc":"js/demo7.js"
+			"jssrc":"js/demo07.js"
+		},
+		{
+			"chapter":"第8章",
+			"title":"缓动",
+			"jssrc":"js/demo08.js"
+		},
+		{
+			"chapter":"第8章",
+			"title":"弹动",
+			"jssrc":"js/demo09.js"
+		},
+		{
+			"chapter":"第8章",
+			"title":"拴在橡皮筋上的小球",
+			"jssrc":"js/demo10.js"
+		},
+		{
+			"chapter":"第8章",
+			"title":"链式弹动",
+			"jssrc":"js/demo11.js"
 		}
 	]
 

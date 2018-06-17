@@ -14,7 +14,6 @@ utils.captureMouse=function(element){
 		if(event.pageX||event.pageY){
 			x=event.pageX;
 			y=event.pageY;
-			console.log(y);
 		}else{
 			x=event.clientX+document.body.scrollLeft+document.documentElement.scrollLeft;
 			y=event.clientY+document.body.scrollTop+document.documentElement.scrollTop;

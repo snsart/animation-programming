@@ -52,7 +52,7 @@ function createTitle(chapterTxt,titleTxt,jssrc){
 	
 	pro.addEventListener("click",function(e){
 		clearCanvas();
-		showStage(jssrc);
+		showStage(jssrc,titleTxt);
 	});
 }
 
@@ -61,10 +61,19 @@ function clearCanvas(){
 	context.clearRect(0,0,canvas.width,canvas.height);
 }
 
-function showStage(jssrc){
+function showStage(jssrc,titleTxt){
 	animaClose=false;
 	var stage=document.getElementsByClassName("stage");
-	stage[0].setAttribute("style","display: block;");	
+	
+	var title=$($(".canHeader")[0]).children("h2")[0];
+	if(title!=null){
+		$(".canHeader")[0].removeChild(title);
+	}
+	var newTitle=document.createElement("h2");
+	newTitle.innerText=titleTxt;
+	$(".canHeader")[0].appendChild(newTitle);
+	
+	$(stage[0]).fadeIn();
 	
 	var script=document.getElementById("canvasScript");
 	var body=document.getElementById("body");
@@ -83,7 +92,8 @@ function showStage(jssrc){
 var closeBtn=document.getElementById("closeBtn");
 closeBtn.addEventListener("click",function(e){
 	var stage=document.getElementsByClassName("stage");
-	stage[0].setAttribute("style","display: none;");
+	/*stage[0].setAttribute("style","display: none;");*/
+	$(stage[0]).fadeOut();
 	var canvas=document.getElementById("canvas");
 	$(canvas).css("background-color","#FFFFFF");
 	animaClose=true;

@@ -3,7 +3,7 @@
 (function(){
 	var canvas=document.getElementById("canvas"),
 		context=canvas.getContext("2d");
-		$(canvas).css("background-color","#000000");
+		$(canvas).css("background-color","#222222");
 	
 	var ship=new Ship(),
 		vr=0,

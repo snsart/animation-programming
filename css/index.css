@@ -22,36 +22,93 @@ h1,h2{
 	height: 100%;
 	text-align: center;
 	background-color: #000;
-	
 }
 
 .canvasCont{
 	position: absolute;
-	width: 80%;
-	height: 100%;
 	margin: auto;
 	top:0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	border: solid 1px #222;
+	font-size: 0;
+	background-color: #000000;
+	border-bottom: solid 1px #222222;
+	overflow: hidden;
+}
+
+.canvasCont .canHeader{
+	position: relative;
+	width: 100%;
+	height: 12.5%;
+	background-color: #000000;
+}
+
+.canvasCont .canHeader h2{
+	position: absolute;
+	display: block;
+	bottom: 0rem;
+	left: 0rem;
+	font-size: 1rem;
+	padding: 0.1rem 0.3rem;
+	background-color: #5F55D9;
+	border-top-right-radius: 0.5rem;
+	color: #FFFFFF;
+}
+
+
+.canvasCont .canMid{
+	position: relative;
+	width: 100%;
+	height: 75%;
+	background-color: #FFFFFF;
+	border-bottom: solid 1px #222222;
 }
 
 #closeBtn{
 	position: absolute;
+	margin: 5px;
 	top:0;
 	right: 0;
-	width: 42px;
-	height: 42px;
-	margin: 5px;
+	width: 1.5rem;
+	height: 1.5rem;
 	background: url(../img/close.png) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
 }
 
-
 #canvas{
-	height: 100%;
 	width: 100%;
+	height: 100%;
 	background-color: #FFFFFF;
+	border: solid 1px #222222;
+}
+
+.canvasCont .canMid .fullScreenIcon{
+	position: absolute;
+	display: inline-block;
+	margin: 0.2rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 1rem;
+	bottom:0;
+	right: 0;
+	background: url(../img/arrow-big-09.png) #222222 no-repeat;
+	background-size: 80% 80%;
+	background-position-x:0.17rem ;
+	background-position-y:0.17rem ;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.canvasCont .canBottom{
+	width: 100%;
+	height: 30%;
+	font-size:0.5rem ;
+	border-top: solid 1px #222222;
+	background-color: #000000;
+	text-align: left;
+	color: #FFFFFF;
 }
 
 

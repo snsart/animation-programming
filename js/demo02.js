@@ -16,6 +16,7 @@
 		}
 		window.requestAnimationFrame(drawFrame,canvas);
 		context.beginPath();
+		context.strokeStyle="#5F55D9";
 		context.moveTo(xPos,yPos);
 		xPos+=vx;
 		angle+=vy;
