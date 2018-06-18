@@ -54,6 +54,26 @@
 			"chapter":"第8章",
 			"title":"链式弹动",
 			"jssrc":"js/demo11.js"
+		},
+		{
+			"chapter":"第8章",
+			"title":"面向多目标的弹动",
+			"jssrc":"js/demo12.js"
+		},
+		{
+			"chapter":"第8章",
+			"title":"弹簧链接两个小球",
+			"jssrc":"js/demo13.js"
+		},
+		{
+			"chapter":"第8章",
+			"title":"弹簧链接多个小球",
+			"jssrc":"js/demo14.js"
+		},
+		{
+			"chapter":"第9章",
+			"title":"弹性碰撞",
+			"jssrc":"js/demo15.js"
 		}
 	]
 
