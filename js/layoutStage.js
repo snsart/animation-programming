@@ -1,12 +1,16 @@
-var scale=4/3;
+
+window.onresize = function(){
+	layoutStage(canvasHeightScale);	
+	//layoutPros();
+}
+
+//布局播放器界面
+
+var scale=4/3;//舞台容器的宽高比
 var scalingRatio=1;//canvas缩放比例
-var canvasHeightScale=0.75;
+var canvasHeightScale=0.75;//canvas在容器中所占比例
 var canvas=document.getElementById("canvas");
 layoutStage(canvasHeightScale);
-window.onresize = function(){
-	layoutStage(canvasHeightScale);
-	
-}
 
 window.addEventListener("orientationchange", function(){
 	layoutStage();
@@ -58,5 +62,29 @@ function layoutStage(){
 		$(canvasCont).css("height",innerWidth/scale);
 		scalingRatio=canvas.width/innerWidth;
 	}
+}
+
+/*布局导航界面*/
+
+var containerScale;
+var minProWidth;
+var fontSize=$("html").css("font-size").slice(0,-2);
+if(isPC){
+	containerScale=0.8;
+	minProWidth=12*Number(fontSize);
+}else{
+	containerScale=1;
+	minProWidth=10.4*Number(fontSize);
+}
+
+
+function layoutPros(){
+	var containerWidth=innerWidth*containerScale;
+	var numPro=Math.floor(containerWidth/minProWidth);
+	proWidth=(containerWidth/numPro)/Number(fontSize);
+	margin=isPC?2:0.4
+	proWidthRem=String(proWidth+margin).substr(0,4)+"rem";
+	$(".pro").css("width",proWidthRem);
+	console.log(containerWidth,proWidth*16*numPro);
 }
 

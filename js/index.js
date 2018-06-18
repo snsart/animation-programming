@@ -19,6 +19,14 @@ function createIndex(){
 		var jssrc=data.pro[i].jssrc;
 		createTitle(chapterTxt,titleTxt,jssrc);
 	}
+	
+	if(isPC){
+		$(".container").css("width","80%");
+		$(".pro").css("margin","1rem" );
+	}else{
+		$(".container").css("width","100%");
+		$(".pro").css("margin","0.4rem");
+	}
 }
 
 function createTitle(chapterTxt,titleTxt,jssrc){

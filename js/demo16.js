@@ -3,15 +3,12 @@
 		context=canvas.getContext("2d");
 		$(canvas).css("background-color","#222222");
 
-	var centerBall=new Ball(100,"#666666"),
-		balls=[],
-		numBalls=10;
+	var balls=[],
+		numBalls=20;
 		spring=0.05,//弹性系数
-		bounce=-1;
+		bounce=-0.5,
+		gravity=0.1;
 		
-	centerBall.x=canvas.width/2;
-	centerBall.y=canvas.height/2;
-	
 	function createBalls(){
 		while(numBalls--){
 			var ball=new Ball(Math.random()*40+5,Math.random()*0xffffff);
@@ -24,7 +21,32 @@
 	}
 	createBalls();
 	
+	function checkCollision(ballA,i){
+		for(var ballB,dx,dy,dis,minDist,j=i+1;j<balls.length;j++){
+			ballB=balls[j];
+			dx=ballB.x-ballA.x;
+			dy=ballB.y-ballA.y;
+			dist=Math.sqrt(dx*dx+dy*dy);
+			minDist=ballA.radius+ballB.radius;
+			if(dist<minDist){
+				var tx=ballA.x+dx/dist*minDist,
+					ty=ballA.y+dx/dist*minDist,
+					ax=(tx-ballB.x)*spring*0.5,
+					ay=(ty-ballB.y)*spring*0.5;
+				ballA.vx-=ax;
+				ballA.vy-=ay;
+				ballB.vx+=ax;
+				ballB.vy+=ay;
+			}
+		}
+	}
+	
+	function draw(ball){
+		ball.draw(context);
+	}
+	
 	function move(ball){
+		ball.vy+=gravity;
 		ball.x+=ball.vx;
 		ball.y+=ball.vy;
 		if(ball.x+ball.radius>canvas.width){
@@ -42,21 +64,7 @@
 			ball.vy*=bounce;
 		}
 	}
-	
-	function draw(ball){
-		var dx=ball.x-centerBall.x,
-			dy=ball.y-centerBall.y,
-			dist=Math.sqrt(dx*dx+dy*dy),
-			minDist=ball.radius+centerBall.radius;
-		if(dist<minDist){
-			var angle=Math.atan2(dy,dx);
-			tx=centerBall.x+Math.cos(angle)*minDist;
-			ty=centerBall.y+Math.sin(angle)*minDist;
-			ball.vx+=(tx-ball.x)*spring;
-			ball.vy+=(ty-ball.y)*spring;
-		}
-		ball.draw(context);
-	}
+
 	
 	(function drawFrame(){
 		if(animaClose){
@@ -68,9 +76,9 @@
 	})()
 	
 	function enterFrameHandler(){
+		balls.forEach(checkCollision);
 		balls.forEach(move);
 		balls.forEach(draw);
-		centerBall.draw(context);
 	}
 	
 })();

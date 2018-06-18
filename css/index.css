@@ -1,8 +1,9 @@
 html{
-	
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
 }
 body{
-	font-size: 12px;
 	margin: 0;
 	padding: 0;
 }
@@ -116,9 +117,11 @@ h1,h2{
 .container{
 	width: 80%;
 	margin: 10rem  auto;
+	height: 20rem;
 }
 
 .pro{
+	padding: 0;
 	position: relative;
 	width: 10rem;
 	height: 10rem;
@@ -152,6 +155,7 @@ h1,h2{
 .title h1{
 	margin: 0;
 	line-height: 2rem;
+	font-size: 1.5rem;
 	color: #fff;
 	letter-spacing: 0.2rem;
 }

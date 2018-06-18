@@ -74,6 +74,16 @@
 			"chapter":"第9章",
 			"title":"弹性碰撞",
 			"jssrc":"js/demo15.js"
+		},
+		{
+			"chapter":"第9章",
+			"title":"多物体之间的碰撞",
+			"jssrc":"js/demo16.js"
+		},
+		{
+			"chapter":"第10章",
+			"title":"坐标旋转",
+			"jssrc":"js/demo17.js"
 		}
 	]
 
