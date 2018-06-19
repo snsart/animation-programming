@@ -84,6 +84,11 @@
 			"chapter":"第10章",
 			"title":"坐标旋转",
 			"jssrc":"js/demo17.js"
+		},
+		{
+			"chapter":"第10章",
+			"title":"斜面反弹",
+			"jssrc":"js/demo18.js"
 		}
 	]
 

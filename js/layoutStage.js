@@ -85,6 +85,5 @@ function layoutPros(){
 	margin=isPC?2:0.4
 	proWidthRem=String(proWidth+margin).substr(0,4)+"rem";
 	$(".pro").css("width",proWidthRem);
-	console.log(containerWidth,proWidth*16*numPro);
 }
 
