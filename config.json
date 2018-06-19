@@ -89,6 +89,11 @@
 			"chapter":"第10章",
 			"title":"斜面反弹",
 			"jssrc":"js/demo18.js"
+		},
+		{
+			"chapter":"第10章",
+			"title":"从多个斜面反弹",
+			"jssrc":"js/demo19.js"
 		}
 	]
 
