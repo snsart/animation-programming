@@ -8,6 +8,7 @@ request.onload=function(){
 	if(request.status==200){
 		data=JSON.parse(request.responseText);
 		createIndex();
+		layoutPros();
 	}
 }
 request.send(null);
@@ -22,16 +23,18 @@ function createIndex(){
 	
 	if(isPC){
 		$(".container").css("width","80%");
-		$(".pro").css("margin","1rem" );
 	}else{
 		$(".container").css("width","100%");
-		$(".pro").css("margin","0.4rem");
 	}
 }
 
 function createTitle(chapterTxt,titleTxt,jssrc){
+	
+	var proCont=document.createElement("div");
+	proCont.setAttribute("class","pro-cont fl");
+	
 	var pro=document.createElement("div");
-	pro.setAttribute("class","pro fl");
+	pro.setAttribute("class","pro");
 	
 	var chapter=document.createElement("div");
 	chapter.setAttribute("class","chapter");
@@ -54,9 +57,10 @@ function createTitle(chapterTxt,titleTxt,jssrc){
 	pro.appendChild(chapter);
 	pro.appendChild(title);
 	pro.appendChild(fileInfo);
+	proCont.appendChild(pro);
 	
 	var con=document.getElementsByClassName("container");
-	con[0].appendChild(pro);
+	con[0].appendChild(proCont);
 	
 	pro.addEventListener("click",function(e){
 		clearCanvas();

@@ -1,7 +1,7 @@
 
 window.onresize = function(){
 	layoutStage(canvasHeightScale);	
-	//layoutPros();
+	layoutPros();
 }
 
 //布局播放器界面
@@ -16,6 +16,7 @@ window.addEventListener("orientationchange", function(){
 	layoutStage();
 	setTimeout(function(){
 		layoutStage(canvasHeightScale);
+		layoutPros();
 	},300)
 }, false);
 
@@ -67,23 +68,19 @@ function layoutStage(){
 /*布局导航界面*/
 
 var containerScale;
-var minProWidth;
 var fontSize=$("html").css("font-size").slice(0,-2);
 if(isPC){
 	containerScale=0.8;
-	minProWidth=12*Number(fontSize);
 }else{
 	containerScale=1;
-	minProWidth=10.4*Number(fontSize);
 }
 
 
 function layoutPros(){
+	var minProWidth=Number($(".pro-cont").css("min-width").slice(0,-2));
 	var containerWidth=innerWidth*containerScale;
 	var numPro=Math.floor(containerWidth/minProWidth);
-	proWidth=(containerWidth/numPro)/Number(fontSize);
-	margin=isPC?2:0.4
-	proWidthRem=String(proWidth+margin).substr(0,4)+"rem";
-	$(".pro").css("width",proWidthRem);
+	proWidth=100/numPro+"%";
+	$(".pro-cont").css("width",proWidth);
 }
 
