@@ -1,3 +1,7 @@
+window.onload=function(){
+	layoutStage(canvasHeightScale);	
+	layoutPros();
+}
 
 window.onresize = function(){
 	layoutStage(canvasHeightScale);	
@@ -77,10 +81,13 @@ if(isPC){
 
 
 function layoutPros(){
+	var ratio=0.46;
 	var minProWidth=Number($(".pro-cont").css("min-width").slice(0,-2));
-	var containerWidth=innerWidth*containerScale;
+	var containerWidth=$(".container").width();
 	var numPro=Math.floor(containerWidth/minProWidth);
-	proWidth=100/numPro+"%";
+	var proWidth=100/numPro+"%";
 	$(".pro-cont").css("width",proWidth);
+	var proHeight=$(".pro-cont").width()*ratio
+	$(".pro-cont").css("height",proHeight);
 }
 

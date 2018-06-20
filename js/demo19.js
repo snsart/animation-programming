@@ -1,7 +1,7 @@
 (function(){
 	var canvas=document.getElementById("canvas"),
 		context=canvas.getContext("2d");
-		$(canvas).css("background-color","#222222");
+		$(canvas).css("background-color","#000000");
 
 	var lines=[],
 		ball=new Ball(50),

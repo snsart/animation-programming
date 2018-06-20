@@ -24,7 +24,7 @@ function createIndex(){
 	if(isPC){
 		$(".container").css("width","80%");
 	}else{
-		$(".container").css("width","100%");
+		$(".container").css("width","95%");
 	}
 }
 
@@ -104,7 +104,6 @@ function showStage(jssrc,titleTxt){
 var closeBtn=document.getElementById("closeBtn");
 closeBtn.addEventListener("click",function(e){
 	var stage=document.getElementsByClassName("stage");
-	/*stage[0].setAttribute("style","display: none;");*/
 	$(stage[0]).fadeOut();
 	var canvas=document.getElementById("canvas");
 	$(canvas).css("background-color","#FFFFFF");
