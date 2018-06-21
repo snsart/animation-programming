@@ -176,20 +176,27 @@ h1,h2{
 	height: 60%;
 	background-color: #24292e;
 	font-size: 1rem;
-	color: #FFFFFF;
+	color: #C8BFA2;
 	font-family:"楷体";
 }
 
 .pro-head .pro-type{
 	position: absolute;
+	display: table;
 	height: 70%;
-	width: 20%;
-	padding: 0.2rem;
+	width: 25%;
 	background-color: #C8BFA2;
-	border-bottom-left-radius:2rem ;
-	line-height: 160%;
+	border-bottom-left-radius:1rem ;
 	font-size: 0.8rem;
 	right: 0;
+	top:0;
+}
+
+.pro-head .pro-type p{
+	display: table-cell;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
 }
 
 .pro-mid{
@@ -213,7 +220,7 @@ h1,h2{
 	top:0;
 	bottom: 0;
 	left: 5%;
-	border: 2px solid #000000;
+	border: 1px solid #222222;
 	background: url(../img/timg.jpg) no-repeat;
 	background-size:100% 100% ;
 	
@@ -237,48 +244,35 @@ h1,h2{
 	padding: 0.5rem;
 	vertical-align: middle;
 	font-size: 1.5rem;
+	letter-spacing:3px;
 	color: #C8BFA2;
 	font-weight:bold;
 }
 
 
-
-
-.chapter h2{
-	display: inline-block;
-	margin: 0rem auto 0rem auto;
-	padding: 0.2rem;
-	border-radius:0rem 0rem 0.5rem 0.5rem;
-	border: 1px solid #000000;
-	height: 1.5rem;
-	background-color: #24292e;
-	font-size: 1rem;
-	color: #FFFFFF;
-	font-family:"楷体";
-}
-
-.title{
-	margin-top: 1.5rem;
-	text-align: center;
-	padding: 0 0.2rem;
-}
-
-.title h1{
-	margin: 0;
-	line-height: 2rem;
-	font-size: 1.5rem;
-	color: #c8bfa2;
-	letter-spacing: 0.2rem;
-}
-
-.fileInfo{
-	position: absolute;
-	padding: 0 0.2rem;
+.pro-bottom{
+	position: relative;
+	width: 100%;
+	height: 20%;
 	bottom: 0;
 	right: 0;
 	line-height: 0;
-	border-top-left-radius: 0.5rem;
-	color: #FFFFFF;
+	font-size: 0.7rem;
+}
+
+.pro-key{
+	position: absolute;
+	top: 0;
+	left: 0.5rem;
+	color: #666666;
+}
+
+.pro-filesrc{
+	position: absolute;
+	bottom: 0;
+	right: 0.2rem;
+	line-height: 0;
+	color: #000000;
 }
 
 .fl{

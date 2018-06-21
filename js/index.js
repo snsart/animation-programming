@@ -1,7 +1,7 @@
 var animaClose=false;
 var canvas=document.getElementById("canvas");
 var data;
-var url="config.json";
+var url="config2.json";
 var request=new XMLHttpRequest();
 request.open("GET",url);
 request.onload=function(){
@@ -18,7 +18,9 @@ function createIndex(){
 		var chapterTxt=data.pro[i].chapter;
 		var titleTxt=data.pro[i].title;
 		var jssrc=data.pro[i].jssrc;
-		createTitle(chapterTxt,titleTxt,jssrc);
+		var imgsrc=data.pro[i].imgSrc;
+		var key=data.pro[i].key;
+		createTitle(chapterTxt,titleTxt,jssrc,imgsrc,key);
 	}
 	
 	if(isPC){
@@ -28,44 +30,17 @@ function createIndex(){
 	}
 }
 
-function createTitle(chapterTxt,titleTxt,jssrc){
-	
-	/*var proCont=document.createElement("div");
-	proCont.setAttribute("class","pro-cont fl");
-	
-	var pro=document.createElement("div");
-	pro.setAttribute("class","pro");
-	
-	var chapter=document.createElement("div");
-	chapter.setAttribute("class","chapter");
-	var h2=document.createElement("h2");
-	h2.innerText=chapterTxt;
-	chapter.appendChild(h2);
-	
-	var title=document.createElement("div");
-	title.setAttribute("class","title");
-	var h1=document.createElement("h1");
-	h1.innerText=titleTxt;
-	title.appendChild(h1);
-	
-	var fileInfo=document.createElement("div");
-	fileInfo.setAttribute("class","fileInfo");
-	var p=document.createElement("p");
-	p.innerText=jssrc;
-	fileInfo.appendChild(p);
-	
-	pro.appendChild(chapter);
-	pro.appendChild(title);
-	pro.appendChild(fileInfo);
-	proCont.appendChild(pro);*/
-	
+function createTitle(chapterTxt,titleTxt,jssrc,imgsrc,key){
 	
 	var proCont=$($(".pro-cont")[0]).clone();
 	$(proCont).css("display","block");
 	$(proCont).find(".pro-index")[0].innerText=chapterTxt;
 	$(proCont).find(".pro-title p")[0].innerText=titleTxt;
-	$(proCont).find(".fileInfo p")[0].innerText=jssrc;
-	console.log()
+	var iconImgSrc="url("+imgsrc+")";	
+	$($(proCont).find(".pro-img")).css("background-image",iconImgSrc);
+	$(proCont).find(".pro-filesrc")[0].innerText=jssrc;
+	$(proCont).find(".pro-key")[0].innerText=key;
+	
 	var con=document.getElementsByClassName("container");
 	$(con[0]).append(proCont);
 	
@@ -104,8 +79,7 @@ function showStage(jssrc,titleTxt){
 	newScript.charset="UTF-8";
 	newScript.setAttribute("id","canvasScript");
 	newScript.src=jssrc;
-	body.appendChild(newScript);
-	
+	body.appendChild(newScript);	
 }
 
 var closeBtn=document.getElementById("closeBtn");

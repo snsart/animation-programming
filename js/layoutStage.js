@@ -19,7 +19,7 @@ layoutStage(canvasHeightScale);
 window.addEventListener("orientationchange", function(){
 	layoutStage();
 	setTimeout(function(){
-		layoutStage(canvasHeightScale);
+		layoutStage();
 		layoutPros();
 	},300)
 }, false);
@@ -32,8 +32,7 @@ fullScreen.addEventListener("click",function(){
 		fullScreenHandler();
 	}else{
 		initScreen();
-	}
-	
+	}	
 });
 
 function fullScreenHandler(){
@@ -43,7 +42,7 @@ function fullScreenHandler(){
 	$($(".canMid")[0]).css("height","100%");
 	$($(".canBottom")[0]).css("display","none");
 	$($(".fullScreenIcon")[0]).css("background-image","url(img/arrow-small-09.png)");
-	layoutStage(canvasHeightScale);
+	layoutStage();
 }
 
 function initScreen(){
@@ -53,7 +52,7 @@ function initScreen(){
 	$($(".canMid")[0]).css("height","75%");
 	$($(".canBottom")[0]).css("display","block");
 	$($(".fullScreenIcon")[0]).css("background-image","url(img/arrow-big-09.png)");
-	layoutStage(canvasHeightScale);
+	layoutStage();
 }
 
 function layoutStage(){
@@ -71,14 +70,13 @@ function layoutStage(){
 
 /*布局导航界面*/
 
-var ratio=0.6;
+var ratio=0.6;//pro长宽比
 var fontSize=$("html").css("font-size").slice(0,-2);
 if(isPC){
 	ratio=0.6;
 }else{
 	ratio=0.46;
 }
-
 
 function layoutPros(){
 	var minProWidth=Number($(".pro-cont").css("min-width").slice(0,-2));

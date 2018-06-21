@@ -3,97 +3,142 @@
 		{
 			"chapter":"第3章",
 			"title":"脉冲运动",
-			"jssrc":"js/demo01.js"
+			"jssrc":"js/demo01.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"三角函数"
 		},
 		{
 			"chapter":"第3章",
 			"title":"绘制正弦波",
-			"jssrc":"js/demo02.js"
+			"jssrc":"js/demo02.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"向量分解 三角函数"
 		},
 		{
 			"chapter":"第4章",
 			"title":"迷幻闪光灯",
-			"jssrc":"js/demo03.js"
+			"jssrc":"js/demo03.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"颜色提取 操纵像素"
 		},
 		{
 			"chapter":"第5章",
 			"title":"加速度",
-			"jssrc":"js/demo04.js"
+			"jssrc":"js/demo04.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度"
 		},
 		{
 			"chapter":"第5章",
 			"title":"宇宙飞船",
-			"jssrc":"js/demo05.js"
+			"jssrc":"js/demo05.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度 三角函数 摩擦力 环境边界"
 		},
 		{
 			"chapter":"第6章",
 			"title":"喷泉",
-			"jssrc":"js/demo06.js"
+			"jssrc":"js/demo06.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度 重力"
 		},
 		{
 			"chapter":"第7章",
 			"title":"拖拽与投掷",
-			"jssrc":"js/demo07.js"
+			"jssrc":"js/demo07.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度"
 		},
 		{
 			"chapter":"第8章",
 			"title":"缓动",
-			"jssrc":"js/demo08.js"
+			"jssrc":"js/demo08.js",
+			"imgSrc":"img/icon.jpg",
+			"key":""
 		},
 		{
 			"chapter":"第8章",
 			"title":"弹动",
-			"jssrc":"js/demo09.js"
+			"jssrc":"js/demo09.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度"
 		},
 		{
 			"chapter":"第8章",
 			"title":"拴在橡皮筋上的小球",
-			"jssrc":"js/demo10.js"
+			"jssrc":"js/demo10.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度 重力 摩擦力"
 		},
 		{
 			"chapter":"第8章",
 			"title":"链式弹动",
-			"jssrc":"js/demo11.js"
+			"jssrc":"js/demo11.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度 摩擦力"
 		},
 		{
 			"chapter":"第8章",
 			"title":"面向多目标的弹动",
-			"jssrc":"js/demo12.js"
+			"jssrc":"js/demo12.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第8章",
 			"title":"弹簧链接两个小球",
-			"jssrc":"js/demo13.js"
+			"jssrc":"js/demo13.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第8章",
 			"title":"弹簧链接多个小球",
-			"jssrc":"js/demo14.js"
+			"jssrc":"js/demo14.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第9章",
 			"title":"弹性碰撞",
-			"jssrc":"js/demo15.js"
+			"jssrc":"js/demo15.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第9章",
 			"title":"多物体之间的碰撞",
-			"jssrc":"js/demo16.js"
+			"jssrc":"js/demo16.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第10章",
 			"title":"坐标旋转",
-			"jssrc":"js/demo17.js"
+			"jssrc":"js/demo17.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第10章",
 			"title":"斜面反弹",
-			"jssrc":"js/demo18.js"
+			"jssrc":"js/demo18.js",
+			"imgSrc":"img/icon.jpg",
+			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第10章",
 			"title":"从多个斜面反弹",
-			"jssrc":"js/demo19.js"
+			"jssrc":"js/demo19.js",
+			"imgSrc":"img/timg.jpg",
+			"key":"加速度 三角函数 摩擦力"
+		},
+		{
+			"chapter":"第10章",
+			"title":"撞球物理",
+			"jssrc":"js/demo19.js",
+			"imgSrc":"img/timg.jpg",
+			"key":"加速度 三角函数 摩擦力"
 		}
 	]
 
