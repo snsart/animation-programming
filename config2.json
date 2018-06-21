@@ -134,11 +134,18 @@
 			"key":"加速度 三角函数 摩擦力"
 		},
 		{
-			"chapter":"第10章",
-			"title":"撞球物理",
-			"jssrc":"js/demo19.js",
+			"chapter":"第11章",
+			"title":"单轴上的动量守恒",
+			"jssrc":"js/demo20.js",
 			"imgSrc":"img/timg.jpg",
-			"key":"加速度 三角函数 摩擦力"
+			"key":"撞球物理 动量(mv)守恒 动能(0.5*mv^2)守恒"
+		},
+		{
+			"chapter":"第11章",
+			"title":"双轴上的动量守恒",
+			"jssrc":"js/demo21.js",
+			"imgSrc":"img/timg.jpg",
+			"key":"撞球物理 动量(mv)守恒 动能(0.5*mv^2)守恒"
 		}
 	]
 

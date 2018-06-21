@@ -212,10 +212,10 @@ h1,h2{
 	position: absolute;
 	display: block;
 	opacity: 1;
-	width: 20%;
-	padding-top: 20%;
+	width: 30%;
+	padding-top: 30%;
 	height: 0;
-	border-radius: 50%;
+	border-radius: 20%;
 	margin: auto;
 	top:0;
 	bottom: 0;
@@ -229,8 +229,8 @@ h1,h2{
 .pro-title{
 	position: absolute;
 	display: table;
-	width: 70%;
-	left: 30%;
+	width: 65%;
+	left: 35%;
 	height: 70%;
 	top: 0;
 	bottom: 0;
@@ -243,9 +243,9 @@ h1,h2{
 	margin: 0 auto;
 	padding: 0.5rem;
 	vertical-align: middle;
-	font-size: 1.5rem;
-	letter-spacing:3px;
-	color: #C8BFA2;
+	font-size: 1.2rem;
+	letter-spacing:2px;
+	color: #FFFFFF;
 	font-weight:bold;
 }
 
@@ -258,12 +258,13 @@ h1,h2{
 	right: 0;
 	line-height: 0;
 	font-size: 0.7rem;
+	background:#ffffff;
 }
 
 .pro-key{
 	position: absolute;
-	top: 0;
-	left: 0.5rem;
+	bottom: 0;
+	left: 0;
 	color: #666666;
 }
 

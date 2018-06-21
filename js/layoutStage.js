@@ -73,7 +73,7 @@ function layoutStage(){
 var ratio=0.6;//pro长宽比
 var fontSize=$("html").css("font-size").slice(0,-2);
 if(isPC){
-	ratio=0.6;
+	ratio=0.46;
 }else{
 	ratio=0.46;
 }
