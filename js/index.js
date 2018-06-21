@@ -30,7 +30,7 @@ function createIndex(){
 
 function createTitle(chapterTxt,titleTxt,jssrc){
 	
-	var proCont=document.createElement("div");
+	/*var proCont=document.createElement("div");
 	proCont.setAttribute("class","pro-cont fl");
 	
 	var pro=document.createElement("div");
@@ -57,12 +57,19 @@ function createTitle(chapterTxt,titleTxt,jssrc){
 	pro.appendChild(chapter);
 	pro.appendChild(title);
 	pro.appendChild(fileInfo);
-	proCont.appendChild(pro);
+	proCont.appendChild(pro);*/
 	
+	
+	var proCont=$($(".pro-cont")[0]).clone();
+	$(proCont).css("display","block");
+	$(proCont).find(".pro-index")[0].innerText=chapterTxt;
+	$(proCont).find(".pro-title p")[0].innerText=titleTxt;
+	$(proCont).find(".fileInfo p")[0].innerText=jssrc;
+	console.log()
 	var con=document.getElementsByClassName("container");
-	con[0].appendChild(proCont);
+	$(con[0]).append(proCont);
 	
-	pro.addEventListener("click",function(e){
+	$(proCont).click(function(e){
 		clearCanvas();
 		showStage(jssrc,titleTxt);
 	});

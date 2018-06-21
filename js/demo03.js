@@ -17,7 +17,6 @@
 				context.fillRect(i,j,10,10);
 			}
 		}
-		console.log(mouse.x,mouse.y);
 		var imagedata=context.getImageData(0,0,canvas.width,canvas.height),
 			pixels=imagedata.data;
 			

@@ -71,17 +71,16 @@ function layoutStage(){
 
 /*布局导航界面*/
 
-var containerScale;
+var ratio=0.6;
 var fontSize=$("html").css("font-size").slice(0,-2);
 if(isPC){
-	containerScale=0.8;
+	ratio=0.6;
 }else{
-	containerScale=1;
+	ratio=0.46;
 }
 
 
 function layoutPros(){
-	var ratio=0.46;
 	var minProWidth=Number($(".pro-cont").css("min-width").slice(0,-2));
 	var containerWidth=$(".container").width();
 	var numPro=Math.floor(containerWidth/minProWidth);
