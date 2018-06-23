@@ -146,6 +146,41 @@
 			"jssrc":"js/demo21.js",
 			"imgSrc":"img/timg.jpg",
 			"key":"撞球物理 动量(mv)守恒 动能(0.5*mv^2)守恒"
+		},
+		{
+			"chapter":"第11章",
+			"title":"多个物体之间的碰撞",
+			"jssrc":"js/demo22.js",
+			"imgSrc":"img/timg.jpg",
+			"key":"撞球物理 动量(mv)守恒 动能(0.5*mv^2)守恒"
+		},
+		{
+			"chapter":"第12章",
+			"title":"万有引力",
+			"jssrc":"js/demo23.js",
+			"imgSrc":"img/timg.jpg",
+			"key":"粒子 万有引力 弹弓效应"
+		},
+		{
+			"chapter":"第12章",
+			"title":"轨道运动",
+			"jssrc":"js/demo24.js",
+			"imgSrc":"img/timg.jpg",
+			"key":"万有引力 缓动"
+		},
+		{
+			"chapter":"第12章",
+			"title":"弹力节点花园",
+			"jssrc":"js/demo25.js",
+			"imgSrc":"img/timg.jpg",
+			"key":"粒子 万有引力 弹力"
+		},
+		{
+			"chapter":"第12章",
+			"title":"行走",
+			"jssrc":"js/demo26.js",
+			"imgSrc":"img/timg.jpg",
+			"key":"正向运动学"
 		}
 	]
 

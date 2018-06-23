@@ -82,7 +82,7 @@ utils.captureTouch=function(element){
 
 utils.colorToRGB=function(color,alpha){
 	if(typeof color==="string"&&color[0]==="#"){
-		color.window.parseInt(color.slice(1),16);
+		color=window.parseInt(color.slice(1),16);
 	}
 	alpha=(alpha===undefined)?1:alpha;
 	var r=color>>16&0xff,

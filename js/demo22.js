@@ -3,21 +3,21 @@
 		context=canvas.getContext("2d");
 		$(canvas).css("background-color","#000000");
 
-	var bounce=-1;
-		ball0=new Ball(100),
-		ball1=new Ball(60);
+	var bounce=-1,
+		balls=[],
+		numBalls=20;
 		
-		ball0.mass=2;
-		ball0.x=canvas.width/2;
-		ball0.y=canvas.height/2;
-		ball0.vx=Math.random()*10-5;
-		ball0.vy=Math.random()*10-5;
-		
-		ball1.mass=1;
-		ball1.x=canvas.width/2-400;
-		ball1.y=canvas.height/2;
-		ball1.vx=Math.random()*20-10;
-		ball1.vy=Math.random()*20-10;
+	for(var radius,color,ball,i=0;i<numBalls;i++){
+		radius=Math.random()*40+25;
+		color=Math.random()*0xffffff;
+		ball=new Ball(radius,color);
+		ball.mass=radius;
+		ball.x=i*100;
+		ball.y=i*50;
+		ball.vx=Math.random()*10-5;
+		ball.vy=Math.random()*10-5;
+		balls.push(ball);
+	}
 		
 	function rotate(x,y,sin,cos,reverse){
 		return{
@@ -43,8 +43,14 @@
 			vxTotal=vel0.x-vel1.x;
 			vel0.x=((ball0.mass-ball1.mass)*vel0.x+2*ball1.mass*vel1.x)/(ball0.mass+ball1.mass);
 			vel1.x=vxTotal+vel0.x;
-			pos0.x+=vel0.x;
-			pos1.x+=vel1.x;
+			/*pos0.x+=vel0.x;
+			pos1.x+=vel1.x;这两行代码可能出现bug*/
+			
+			/*两个小球合计应移开overlap（两小球重叠部分），每一个应移开多少取决于每个小球的速度占总速度的比例*/
+			var absV=Math.abs(vel0.x)+Math.abs(vel1.x),
+				overlap=(ball0.radius+ball1.radius)-Math.abs(pos0.x-pos1.x);
+			pos0.x+=vel0.x/absV*overlap;
+			pos1.x+=vel1.x/absV*overlap;
 			
 			var pos0F=rotate(pos0.x,pos0.y,sin,cos,false),
 				pos1F=rotate(pos1.x,pos1.y,sin,cos,false);
@@ -80,6 +86,16 @@
 			ball.vy*=bounce;
 		}
 	}
+	
+	function move(ball){
+		ball.x+=ball.vx;
+		ball.y+=ball.vy;
+		checkWalls(ball);
+	}
+	
+	function draw(ball){
+		ball.draw(context);
+	}
 
 		
 	(function drawFrame(){
@@ -92,16 +108,16 @@
 	})()
 	
 	function enterFrameHandler(){
-		ball0.x+=ball0.vx;
-		ball0.y+=ball0.vy;
-		ball1.x+=ball1.vx;
-		ball1.y+=ball1.vy;
-		checkCollision(ball0,ball1);
-		checkWalls(ball0);
-		checkWalls(ball1);
 		
-		ball0.draw(context);
-		ball1.draw(context);
+		balls.forEach(move);
+		for(var ballA,i=0,len=numBalls-1;i<len;i++){
+			ballA=balls[i];
+			for(var ballB,j=i+1;j<numBalls;j++){
+				ballB=balls[j];
+				checkCollision(ballA,ballB);
+			}
+		}
+		balls.forEach(draw);
 	}
 	
 })();

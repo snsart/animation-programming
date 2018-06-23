@@ -17,25 +17,6 @@
 		ball1.y=canvas.height/2;
 		ball1.vx=-2;
 	
-	canvas.addEventListener(myEvent.mousedown,function(){
-		event.preventDefault();
-		if(utils.containsPoint(ball.getBounds(),myEvent.mouse.x,myEvent.mouse.y)){
-			ball.dragging=true;
-			ball.vx=0;
-			ball.vy=0;
-		}
-	});
-	
-	canvas.addEventListener(myEvent.mouseup,function(){
-		ball.dragging=false;
-	});
-	
-	canvas.addEventListener(myEvent.mousemove,function(){
-		if(ball.dragging){
-			ball.x=myEvent.mouse.x;
-			ball.y=myEvent.mouse.y;
-		}
-	});
 	
 	function checkBoundary(ball){
 		if(ball.x+ball.radius>canvas.width){
