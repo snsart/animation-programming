@@ -8,8 +8,8 @@
 		segment2=new Segment(100,30,"#ffff00"),
 		segment3=new Segment(100,30,"#ffff00"),
 		cycle=0,
-		offset=1.2,
-		gravity=0.005,
+		offset=-2.2,
+		gravity=0.5,
 		vx=0,
 		vy=0;
 		
@@ -24,7 +24,7 @@
 	
 	function walk(segA,segB,cyc){
 		
-		var angle0=(Math.sin(cyc)*45+90)*Math.PI/180,
+		var angle0=(Math.sin(cyc)*50+75)*Math.PI/180,
 			angle1=(Math.sin(cyc+offset)*45+45)*Math.PI/180,
 			foot=segB.getPin();
 		
@@ -57,6 +57,21 @@
 			vy-=segment.vy;
 		}
 	}
+	
+	function checkWalls(){
+		var w=canvas.width+200;
+		if(segment0.x>canvas.width+100){
+			segment0.x-=w;
+			segment1.x-=w;
+			segment2.x-=w;
+			segment3.x-=w;
+		}else if(segment0.x<-100){
+			segment0.x+=w;
+			segment1.x+=w;
+			segment2.x+=w;
+			segment3.x+=w;
+		}
+	}
 		
 	(function drawFrame(){
 		if(animaClose){
@@ -68,12 +83,13 @@
 	})()
 	
 	function enterFrameHandler(){
-		cycle+=0.06;
+		cycle+=0.1;
 		setVelocity();
 		walk(segment0,segment1,cycle);
 		walk(segment2,segment3,cycle+Math.PI);
 		checkFloor(segment1);
 		checkFloor(segment3);
+		checkWalls();
 		segment0.draw(context);
 		segment1.draw(context);
 		segment2.draw(context);

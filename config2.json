@@ -181,6 +181,13 @@
 			"jssrc":"js/demo26.js",
 			"imgSrc":"img/timg.jpg",
 			"key":"正向运动学"
+		},
+		{
+			"chapter":"第13章",
+			"title":"拖拽",
+			"jssrc":"js/demo27.js",
+			"imgSrc":"img/timg.jpg",
+			"key":"反向运动学"
 		}
 	]
 
