@@ -4,21 +4,21 @@
 			"chapter":"第3章",
 			"title":"脉冲运动",
 			"jssrc":"js/demo01.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i01.png",
 			"key":"三角函数"
 		},
 		{
 			"chapter":"第3章",
 			"title":"绘制正弦波",
 			"jssrc":"js/demo02.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i02.png",
 			"key":"向量分解 三角函数"
 		},
 		{
 			"chapter":"第4章",
 			"title":"迷幻闪光灯",
 			"jssrc":"js/demo03.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i03.png",
 			"key":"颜色提取 操纵像素"
 		},
 		{
@@ -67,91 +67,91 @@
 			"chapter":"第8章",
 			"title":"拴在橡皮筋上的小球",
 			"jssrc":"js/demo10.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i10.png",
 			"key":"加速度 重力 摩擦力"
 		},
 		{
 			"chapter":"第8章",
 			"title":"链式弹动",
 			"jssrc":"js/demo11.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i11.png",
 			"key":"加速度 摩擦力"
 		},
 		{
 			"chapter":"第8章",
 			"title":"面向多目标的弹动",
 			"jssrc":"js/demo12.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i12.png",
 			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第8章",
 			"title":"弹簧链接两个小球",
 			"jssrc":"js/demo13.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i13.png",
 			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第8章",
 			"title":"弹簧链接多个小球",
 			"jssrc":"js/demo14.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i14.png",
 			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第9章",
 			"title":"弹性碰撞",
 			"jssrc":"js/demo15.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i15.png",
 			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第9章",
 			"title":"多物体之间的碰撞",
 			"jssrc":"js/demo16.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i16.png",
 			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第10章",
 			"title":"坐标旋转",
 			"jssrc":"js/demo17.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i17.png",
 			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第10章",
 			"title":"斜面反弹",
 			"jssrc":"js/demo18.js",
-			"imgSrc":"img/icon.jpg",
+			"imgSrc":"img/icon/i18.png",
 			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第10章",
 			"title":"从多个斜面反弹",
 			"jssrc":"js/demo19.js",
-			"imgSrc":"img/timg.jpg",
+			"imgSrc":"img/icon/i19.png",
 			"key":"加速度 三角函数 摩擦力"
 		},
 		{
 			"chapter":"第11章",
 			"title":"单轴上的动量守恒",
 			"jssrc":"js/demo20.js",
-			"imgSrc":"img/timg.jpg",
+			"imgSrc":"img/icon/i20.png",
 			"key":"撞球物理 动量(mv)守恒 动能(0.5*mv^2)守恒"
 		},
 		{
 			"chapter":"第11章",
 			"title":"双轴上的动量守恒",
 			"jssrc":"js/demo21.js",
-			"imgSrc":"img/timg.jpg",
+			"imgSrc":"img/icon/i21.png",
 			"key":"撞球物理 动量(mv)守恒 动能(0.5*mv^2)守恒"
 		},
 		{
 			"chapter":"第11章",
 			"title":"多个物体之间的碰撞",
 			"jssrc":"js/demo22.js",
-			"imgSrc":"img/timg.jpg",
+			"imgSrc":"img/icon/i22.png",
 			"key":"撞球物理 动量(mv)守恒 动能(0.5*mv^2)守恒"
 		},
 		{
@@ -165,28 +165,49 @@
 			"chapter":"第12章",
 			"title":"轨道运动",
 			"jssrc":"js/demo24.js",
-			"imgSrc":"img/timg.jpg",
+			"imgSrc":"img/icon/i24.png",
 			"key":"万有引力 缓动"
 		},
 		{
 			"chapter":"第12章",
 			"title":"弹力节点花园",
 			"jssrc":"js/demo25.js",
-			"imgSrc":"img/timg.jpg",
+			"imgSrc":"img/icon/i25.png",
 			"key":"粒子 万有引力 弹力"
 		},
 		{
 			"chapter":"第12章",
 			"title":"行走",
 			"jssrc":"js/demo26.js",
-			"imgSrc":"img/timg.jpg",
+			"imgSrc":"img/icon/i26.png",
 			"key":"正向运动学"
 		},
 		{
 			"chapter":"第13章",
 			"title":"拖拽",
 			"jssrc":"js/demo27.js",
-			"imgSrc":"img/timg.jpg",
+			"imgSrc":"img/icon/i27.png",
+			"key":"反向运动学"
+		},
+		{
+			"chapter":"第13章",
+			"title":"伸向一个点",
+			"jssrc":"js/demo28.js",
+			"imgSrc":"img/icon/i28.png",
+			"key":"反向运动学"
+		},
+		{
+			"chapter":"第14章",
+			"title":"伸出多个节段",
+			"jssrc":"js/demo29.js",
+			"imgSrc":"img/icon/i29.png",
+			"key":"反向运动学"
+		},
+		{
+			"chapter":"第14章",
+			"title":"胳膊喜欢玩球",
+			"jssrc":"js/demo30.js",
+			"imgSrc":"img/icon/i30.png",
 			"key":"反向运动学"
 		}
 	]
